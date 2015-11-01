@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Search Box Sample</title>
+<style>
+.searchForm:before, .searchForm:after{
+    content:"";
+    display:table;
+}
+
+.searchForm:after{
+    clear:both;
+}
+
+.searchForm{
+    zoom:1;
+}
+
+.formWrapper {
+    width: 250px;
+    padding: 15px;
+    margin: 10px auto 50px auto;
+    background: #444;
+    background: rgba(0,0,0,.2);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+}
+
+.formWrapper input {
+    width: 230px;
+    height: 20px;
+    padding: 10px 5px;
+    float: left;
+    font: normal 0.8em 'Lucida sans', 'Trebuchet MS', 'Tahoma';
+    border: 0;
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+}
+
+.formWrapper input:focus {
+    outline: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+
+.formWrapper input::-webkit-input-placeholder {
+   color: #999;
+   font-weight: normal;
+}
+
+.formWrapper input:-moz-placeholder {
+    color: #999;
+    font-weight: normal;
+}
+
+.formWrapper input:-ms-input-placeholder {
+    color: #999;
+    font-weight: normal;
+}
+
+.formWrapper button {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 10px;
+    font: bold 15px/40px 'Lucida sans', 'Trebuchet MS', 'Tahoma';
+    color: #fff;
+    text-transform: uppercase;
+    background: #222222;
+    border-radius: 0 3px 3px 0;
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}
+
+.formWrapper button:hover{
+    background: #ccc;
+}
+
+.formWrapper button:active,
+.formWrapper button:focus{
+    background: #c42f2f;
+	outline: 0;
+}
+
+.formWrapper button:before {
+    content: '';
+    position: absolute;
+    border-width: 8px 8px 8px 0;
+    border-style: solid solid solid none;
+    border-color: transparent #222 transparent;
+    top: 12px;
+    left: -6px;
+}
+
+.formWrapper button:hover:before{
+    border-right-color: #ccc;
+}
+
+.formWrapper button:focus:before,
+.formWrapper button:active:before{
+        border-right-color: #c42f2f;
+}
+
+.formWrapper button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+</style>
+</head>
+
+<body>
+  <form class="formWrapper searchForm">
+        <input type="text" placeholder="Search here..." >
+        <button type="submit"></button>
+    </form>
+</body>
+
+</html>
